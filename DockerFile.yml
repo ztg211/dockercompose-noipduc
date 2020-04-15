@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  noipduc:
+    image: romeupalos/noip
+    container_name: noipduc
+    volumes:
+      - ${URL_HOST_NOIP_CONFIG}:/usr/local/etc
+    restart: unless-stopped
